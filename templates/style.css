@@ -1,0 +1,182 @@
+html {
+    font-size: 62,5%; /* 16px * 62.5 = 10px = 1rem */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.grid-container {
+ display: grid;
+ grid-template-areas: 
+ 'header'
+ 'main'
+ "footer";
+ grid-template-columns: 1fr;
+ grid-template-rows: 5rem 1fr 5rem;
+ height: 100%;
+}
+
+header {
+    grid-area: header;
+    background-color: #f9dc78;
+}
+
+main {
+    grid-area: main;
+    /* padding: 1rem; */
+}
+
+footer {
+    grid-area: footer;
+    background-color: #f9dc78;
+    color: #6a767e;
+
+}
+
+/* Common */
+a {
+    text-decoration: none;
+    color: #6a767e;
+}
+ a:hover {
+     color: #000000;
+ }
+
+ h2 {
+     font-size: 1.6rem;
+     padding: 1rem 0;
+ }
+
+ /* Header */
+ header a {
+     color:rgba(0, 0, 0, 0.64);
+     padding: 1.5rem; 
+ }
+
+ a.brand {
+     color:  #6a767e;
+     font-weight: bold;
+     font-size: 2rem;
+ }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row.center {
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.products {
+    margin-top: 2rem; 
+}
+
+/* Image product */
+img.medium {
+    max-width: 29rem;
+    width: 100%;
+}
+
+/* Card */
+.card {
+    margin: 1rem;
+}
+.card:hover {
+    border: 0.1rem #c0c0c0 solid;
+    margin: 1rem;
+}
+
+.card-body {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+}
+
+.card-body > * {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.2rem;
+}
+
+/* Rating */
+.rating span {
+    color:#f0c040;
+    margin: 0.1rem;
+}
