@@ -1,0 +1,3 @@
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:FIANA28/Lastentarvikekauppa-react/frontend.git
