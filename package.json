@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FIANA28/Lastenboom.git"
+    "url": "git+https://github.com/FIANA28/Lastentarvikekauppa-react.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FIANA28/Lastenboom/issues"
+    "url": "https://github.com/FIANA28/Lastentarvikekauppa/issues"
   },
-  "homepage": "https://github.com/FIANA28/Lastenboom#readme",
+  "homepage": "https://github.com/FIANA28/Lastentarvikekauppa#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
