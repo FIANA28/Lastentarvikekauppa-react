@@ -293,8 +293,18 @@ part 41: Deliver Order
       - create constant, action and reducers for deliver order
       - add order deliver action to order details screen
 
-part 42: Publish to Heroku
+<!-- part 42: Publish to Heroku
       - create git repository
       - create heroku account
       - install Heroku CLI
-      - heroku login
+      - heroku login -->
+
+part 42: List Users
+      - build api for list users
+      - create UserListScreen
+      - create order details constant, action and reducer
+
+part 43: Delete Users
+      - build api for delete users
+      - create order details constant, action and reducer
+      - use action in UserListScreen
