@@ -83,7 +83,7 @@ productRouter.post('/', isAuth, isAdmin, expressAsyncHandler(async (req, res) =>
         description: 'sample description',  
     });
     const createdProduct = await product.save();
-    res.send({ message: 'Product Created', product: createdProduct });
+    res.send({ message: 'Product created', product: createdProduct });
     })
 );
 
@@ -99,7 +99,7 @@ productRouter.put('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) 
         product.countInStock = req.body.countInStock;
         product.description = req.body.description;
         const updatedProduct = await product.save();
-        res.send({ message: 'Product updated', product: updatedProduct });
+        res.send({ message: 'Tuote päivitetty', product: updatedProduct });
     } else {
         res.status(404).send({message: 'Product Not Found'});
     }

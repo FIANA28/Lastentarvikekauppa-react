@@ -308,3 +308,7 @@ part 43: Delete Users
       - build api for delete users
       - create order details constant, action and reducer
       - use action in UserListScreen
+
+part 44: Edit User
+      - build api for update user
+      - create edit screen UI

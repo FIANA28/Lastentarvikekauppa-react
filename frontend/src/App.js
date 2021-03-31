@@ -23,6 +23,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import SearchScreen from './screens/SearchScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
+import UserEditScreen from './screens/UserEditScreen';
 import UserListScreen from './screens/UserListScreen';
 
 function App() {
@@ -134,6 +135,7 @@ function App() {
             <AdminRoute path="/productlist" component={ProductListScreen}></AdminRoute>
             <AdminRoute path="/orderlist" component={OrderListScreen}></AdminRoute>
             <AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
+            <AdminRoute path="/user/:id/edit" component={UserEditScreen}></AdminRoute>
             <Route path="/" component={HomeScreen} exact></Route>
           </main>
         <footer className="row padd">

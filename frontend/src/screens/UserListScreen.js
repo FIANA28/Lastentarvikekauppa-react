@@ -1,19 +1,31 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { listUsers } from '../actions/userActions';
+import { deleteUser, listUsers } from '../actions/userActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { USER_DETAILS_RESET } from '../constants/userConstants';
 
-export default function UserListScreen() {
+export default function UserListScreen(props) {
     const userList = useSelector((state) => state.userList);
-    const dispatch = useDispatch();
     const {loading, error, users } = userList;
+    const userDelete = useSelector((state) => state.userDelete);
+    const {loading: loadingDelete, error: errorDelete, success: successDelete } = userDelete;
+    const dispatch = useDispatch();
     useEffect(() => {
         dispatch(listUsers());
-    }, [dispatch]);
+        dispatch({ type: USER_DETAILS_RESET });
+    }, [dispatch, successDelete]);
+ const deleteHandler = (user) => {
+        if(window.confirm('Haluatko varmasti poistaa tuotteen?')) {
+            dispatch(deleteUser(user._id));
+        } 
+    }
   return (
-    <div>
+    <div className="padd">
         <h1>Käyttäjätilit</h1>
+        {loadingDelete && <LoadingBox></LoadingBox>}
+        {errorDelete && <MessageBox variat="danger">{errorDelete}</MessageBox>}
+        {successDelete && <MessageBox variant ="success">Käyttäjän poisto onnistui</MessageBox>}
         {loading? (<LoadingBox></LoadingBox>) :
         error? (<MessageBox variant="danger">{error}</MessageBox>) :
         (
@@ -21,7 +33,7 @@ export default function UserListScreen() {
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>KÄYTTÄJÄn NIMI</th>
+                        <th>NIMI</th>
                         <th>SÄHKÖPOSTIOSOITE</th>
                         <th>MYYJÄ</th>
                         <th>ADMIN</th>
@@ -38,8 +50,8 @@ export default function UserListScreen() {
                                 <td>{user.isSeller? 'YES' : 'NO'}</td>
                                 <td>{user.isAdmin ? 'YES' : 'NO'}</td>
                                 <td>
-                                    <button>Muokkaa</button>
-                                    <button>Poista</button>
+                                    <button type="button" className="small" onClick={() => props.history.push(`/user/${user._id}/edit`)}>Muokkaa</button>
+                                    <button type="button" className="small" onClick={() => deleteHandler(user)}>Poista</button>
                                 </td>
                             </tr>
                         )) 
