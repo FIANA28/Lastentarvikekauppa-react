@@ -312,3 +312,8 @@ part 43: Delete Users
 part 44: Edit User
       - build api for update user
       - create edit screen UI
+
+part 45: Complete Advanced Search
+      - filter by price
+      - filter by rating
+      - sort by price, rating, ...
