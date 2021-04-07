@@ -19,7 +19,7 @@ display: grid;
 grid-template-areas: 
 'header'
 'main'
-"footer";
+'footer';
 grid-template-columns: 1fr;
 grid-template-rows: 5rem 1fr 5rem;
 height: 100%;
@@ -38,7 +38,6 @@ footer {
   grid-area: footer;
   background-color: #f9dc78;
   color: #6a767e;
-
 }
 
  /* Carousel */
@@ -428,4 +427,9 @@ img.medium {
 
 table button {
   margin: 0 0.2rem;
+}
+
+.copyright {
+  padding: 1rem;
+  color: #6a767e;
 }

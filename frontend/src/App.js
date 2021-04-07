@@ -139,8 +139,9 @@ function App() {
             <Route path="/" component={HomeScreen} exact></Route>
           </main>
         <footer className="row padd">
-          <div className="col-1">All rights reserved. / Photo Credits: Shirota Yuri, Nathan Dumlao, Valeria Zoncoll on <strong><a href='www.unsplash.com'>Unsplash</a></strong> and <strong><a href='www.vaunuaitta.fi'>Vaunuaitta</a></strong></div>
+              <div>Photo Credits: Shirota Yuri, Nathan Dumlao, Valeria Zoncoll on <strong><a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a></strong> and <strong><a href="https://www.vaunuaitta.fi/" target="_blank" rel="noreferrer">Vaunuaitta</a></strong></div>
         </footer>
+        <small className="copyright"><span>Copyright &copy; 2021 | Anna Soini</span></small>
       </div>
     </BrowserRouter>
   );
