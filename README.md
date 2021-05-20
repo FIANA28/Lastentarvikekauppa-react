@@ -14,4 +14,4 @@ Carousel photo credits:
 
 <span>Photo by <a href="https://unsplash.com/@zoncoll?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Valeria Zoncoll</a> on <a href="https://unsplash.com/s/photos/baby?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
-Products photo credits: <a href="https://www.vaunuaitta.fi/">Vaunuaitta</a> and <a href="https://www.bigzay.com/product/mickey-mouse-soft-toy/" target="_blank" rel="noreferrer">BigZay</a>
+Products photo credits: <a href="https://www.vaunuaitta.fi/">Vaunuaitta</a> and <a href="https://www.bigzay.com/">BigZay</a>
